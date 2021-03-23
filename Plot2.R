@@ -11,6 +11,11 @@ dataset$DateTime <- strptime(paste(dataset$Date, dataset$Time),
 
 png(filename = 'Plot2.png')
 
+with(dataset, plot(DateTime, Global_active_power, 
+		   type = 'n',
+		   xlab = '',
+		   ylab = 'Global Active Power (kilowatts)'))
+lines(dataset$DateTime, dataset$Global_active_power)
 
 
 dev.off()
